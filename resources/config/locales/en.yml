@@ -6,6 +6,7 @@ en:
         description: Upload and link to files
     admin:
       resources:
+        search: Search files
         delete: Remove this file forever
         edit: Edit this file
         form:

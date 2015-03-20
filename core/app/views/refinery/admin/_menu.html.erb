@@ -3,7 +3,7 @@
 
   <% ::Refinery::Plugins.active.in_menu.each do |plugin| -%>
     <% if plugin.highlighted?(params) && content_for?(:subnav) %>
-      <div class="item">
+      <div class="item active">
     <% end %>
       <%= link_to plugin.title, refinery.url_for(plugin.url),
                   :class => [

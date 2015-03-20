@@ -1,4 +1,4 @@
-<%= form_for [refinery, :admin, @user] do |f| %>
+<%= form_for [refinery, :admin, @user], html: { class: 'ui fluid form segment' } do |f| %>
 
   <%= render '/refinery/admin/error_messages',
              :object => @user,

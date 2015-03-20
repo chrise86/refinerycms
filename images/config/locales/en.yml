@@ -6,6 +6,7 @@ en:
         description: Manage images
     admin:
       images:
+        search: Search images
         delete: Remove this image forever
         edit: Edit this image
         form:
