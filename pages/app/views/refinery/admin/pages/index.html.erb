@@ -1,7 +1,11 @@
-<section id='records' class='tree'>
-  <%= render 'records' %>
-</section>
-<section id='actions'>
+<% content_for :subnav do %>
   <%= render 'actions' %>
-</section>
+<% end %>
+<%= render '/refinery/admin/search', :url => refinery.admin_pages_path, placeholder: t('search', scope: 'refinery.admin.pages') %>
+<div class="ui segments">
+  <%= render 'refinery/admin/search_header', :url => refinery.admin_pages_path %>
+  <section id='records' class='tree ui segment'>
+    <%= render 'records' %>
+  </section>
+</div>
 <%= render '/refinery/admin/make_sortable', options: {tree: true, replaceContentsAfterUpdate: true} if @pages.many? -%>

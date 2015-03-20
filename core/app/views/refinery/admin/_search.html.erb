@@ -1,1 +1,14 @@
-<%= render 'refinery/acts_as_indexed/admin/search', local_assigns if defined?(Refinery::ActsAsIndexed::Engine) %>
+<% if defined?(Refinery::ActsAsIndexed::Engine) %>
+  <form method='GET' action='<%= url %>' class='search_form ui item fluid form'>
+    <div class="field">
+      <div class="ui icon input">
+        <%= text_field :search, nil, :id => 'search', :type => 'search', :name => 'search', :value => params[:search], :title => t('search_input_notice', :scope => 'refinery.admin.search'), placeholder: local_assigns[:placeholder] %>
+        <i class="search icon"></i>
+      </div>
+    </div>
+    <%= hidden_field :visual_editor, nil, :name => 'visual_editor', :id => nil, :value => true  if params[:visual_editor].presence %>
+    <%= hidden_field :dialog, nil, :name => 'dialog', :id => nil, :value => true if from_dialog? %>
+    <%= hidden_field :callback, nil, :name => 'callback', :id => nil, :value => @callback if @callback.presence %>
+    <%#= submit_tag t('button_text', :scope => 'refinery.admin.search'), :name => nil %>
+  </form>
+<% end %>

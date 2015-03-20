@@ -32,6 +32,7 @@ en:
             tab_name: Your file
             link_to_this_resource: Link to this file
       pages:
+        search: Search pages
         delete: Remove this page forever
         edit: Edit this page
         new: Add a new child page

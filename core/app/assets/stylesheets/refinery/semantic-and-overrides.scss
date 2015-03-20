@@ -1,0 +1,76 @@
+@import "semantic-ui";
+
+body {
+  padding-top: 20px;
+}
+
+.site-bar-container {
+  padding-left: 8%;
+  padding-right: 8%;
+  width: auto;
+
+  .item:hover,
+  .link.item:hover,
+  a.item:hover,
+  .menu > .item:hover,
+  .menu > .link.item:hover,
+  .menu > a.item:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.03);
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .site-bar-container {
+    width: auto;
+    padding-left: 0em;
+    padding-right: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .site-bar-container {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .site-bar-container {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .site-bar-container {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .site-bar-container {
+    width: auto;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 23%;
+    padding-right: 23%;
+  }
+}
+
+.ui.item.form input[type="search"] {
+  box-sizing: border-box;
+}

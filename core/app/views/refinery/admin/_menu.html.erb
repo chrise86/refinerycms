@@ -1,17 +1,31 @@
-<nav id="menu">
+<nav id="menu" class="ui fluid vertical menu">
+  <%= yield(:search) %>
+
   <% ::Refinery::Plugins.active.in_menu.each do |plugin| -%>
-    <%= link_to plugin.title, refinery.url_for(plugin.url),
-                :class => ("active" if plugin.highlighted?(params)),
-                :id => "plugin_#{plugin.name}" %>
+    <% if plugin.highlighted?(params) && content_for?(:subnav) %>
+      <div class="item">
+    <% end %>
+      <%= link_to plugin.title, refinery.url_for(plugin.url),
+                  :class => [
+                    ("active" if plugin.highlighted?(params)),
+                    ("item" unless plugin.highlighted?(params) && content_for?(:subnav))
+                  ].join(" "),
+                  :id => "plugin_#{plugin.name}" %>
+      <%= yield :subnav if plugin.highlighted?(params) %>
+    <% if plugin.highlighted?(params) && content_for?(:subnav) %>
+      </div>
+    <% end %>
   <% end -%>
   <% if ::Refinery::Plugins.active.in_menu.many? -%>
     <%= link_to refinery_icon_tag('arrow_up_down.png'), "",
                 :id => "menu_reorder",
-                :title => t('.reorder_menu') %>
+                :title => t('.reorder_menu'),
+                class: 'item' %>
 
     <%= link_to refinery_icon_tag('tick.png'), "",
                 :id => "menu_reorder_done",
                 :title => t('.reorder_menu_done'),
+                class: 'item',
                 :style => "display: none;" %>
   <% end %>
 </nav>
