@@ -21,6 +21,8 @@ en:
       switch_to_your_website: Switch to your website
       switch_to_your_website_editor: Switch to your website editor
     admin:
+      users:
+        search: Search users
       menu:
         reorder_menu: Reorder menu
         reorder_menu_done: I'm done reordering the menu

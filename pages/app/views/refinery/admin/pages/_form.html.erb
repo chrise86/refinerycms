@@ -1,39 +1,40 @@
-<%= form_for [refinery, :admin, @page],
-             :url => (refinery.admin_update_page_path(@page.nested_url) if @page.persisted?) do |f| %>
 
-  <%= render '/refinery/admin/error_messages', :object => @page, :include_object_name => true %>
+  <%= form_for [refinery, :admin, @page],
+               :url => (refinery.admin_update_page_path(@page.nested_url) if @page.persisted?), html: { class: 'ui segment fluid form' } do |f| %>
 
-  <%= render '/refinery/admin/locale_picker', :current_locale => Globalize.locale %>
+    <%= render '/refinery/admin/error_messages', :object => @page, :include_object_name => true %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title, :class => "larger widest" %>
-  </div>
+    <%= render '/refinery/admin/locale_picker', :current_locale => Globalize.locale %>
 
-  <%= render 'form_fields_after_title', :f => f %>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title, :class => "larger widest" %>
+    </div>
 
-  <div class='field'>
-    <%= render 'form_page_parts', :f => f %>
-  </div>
+    <%= render 'form_fields_after_title', :f => f %>
 
-  <%= render 'form_advanced_options', :f => f %>
+    <div class='field'>
+      <%= render 'form_page_parts', :f => f %>
+    </div>
 
-  <%= render '/refinery/admin/form_actions', :f => f,
-             :continue_editing => true,
-             :delete_title => t('delete', :scope => 'refinery.admin.pages'),
-             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @page.title),
-             :before_cancel_button => submit_tag(
-               t('.preview'),
-               :id => 'preview-button',
-               :title => 'Preview page',
-               :name => nil,
-               :class => "wymupdate button",
-               :tooltip => t('.preview_changes')
-             ),
-             :cancel_url => refinery.admin_pages_path %>
+    <%= render 'form_advanced_options', :f => f %>
 
-  <%= render 'form_new_page_parts', :f => f if Refinery::Pages.new_page_parts %>
-<% end %>
+    <%= render '/refinery/admin/form_actions', :f => f,
+               :continue_editing => true,
+               :delete_title => t('delete', :scope => 'refinery.admin.pages'),
+               :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @page.title),
+               :before_cancel_button => submit_tag(
+                 t('.preview'),
+                 :id => 'preview-button',
+                 :title => 'Preview page',
+                 :name => nil,
+                 :class => "wymupdate ui small button",
+                 :tooltip => t('.preview_changes')
+               ),
+               :cancel_url => refinery.admin_pages_path %>
+
+    <%= render 'form_new_page_parts', :f => f if Refinery::Pages.new_page_parts %>
+  <% end %>
 
 <% content_for :javascripts do %>
   <script>
