@@ -1,7 +1,6 @@
 <% flash.each do |key, value| %>
-<div id='flash' class="flash flash_<%= key %>">
+<div id='flash' class="ui <%= key %> message">
   <%= value %>
-  <%= link_to t(".close#{'_this_message' if key.to_s == "message"}"), "",
-              :id => "flash_close" %>
+  <i id="flash_close" class="close icon"></i>
 </div>
 <% end %>

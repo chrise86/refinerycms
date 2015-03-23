@@ -78,3 +78,7 @@ body {
 #content > .segment:first-of-type {
   margin-top: 0;
 }
+
+.ui.message.notice {
+  @extend .ui.message.success;
+}

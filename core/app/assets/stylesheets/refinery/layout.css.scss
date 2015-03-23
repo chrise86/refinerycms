@@ -34,27 +34,10 @@ label[for] {
   cursor: pointer;
 }
 #login_container {
-  font-size: 13px;
   margin: 0px auto 15px auto;
   text-align: left;
-
-  a {
-    color: #41403C;
-    text-decoration: none;
-  }
-  a:hover {
-    color: #000;
-    border-bottom: 1px solid #727272;
-  }
-
-  @include rounded($standard_rounding);
   position: relative;
   margin-top: 15px;
-  #menu {
-    a:hover {
-      border-bottom: 0px;
-    }
-  }
 }
 #login_container {
   background: white;
@@ -228,74 +211,11 @@ header, footer, nav {
   line-height:22px
 }
 #login_container {
-  #page_container {
-    background: transparent;
-    width: 100%;
-    div.remember_me label, label.inline {
-      display: inline;
-    }
-    div.actions {
-      margin-top: 12px;
-    }
-    div.remember_me {
-      width: 300px;
-      float: left;
-    }
-    div.forgot_password {
-      float: right;
-      width: 250px;
-    }
-  }
-  header {
-    background: #eaeaea;
-    height: auto;
-    float: none;
-    width: 100%;
-    @include top-rounded($standard_rounding);
-    h1 {
-      color: #41403c;
-      vertical-align: middle;
-      text-align: center;
-      font-weight: bold;
-      font-size: 18px;
-      padding-bottom: 15px;
-      line-height: 30px;
-      padding-top: 15px;
-    }
-  }
-  label {
-    margin-top: 0px;
-  }
-  label, a {
-    font-size: 14px;
-  }
-  .field {
-    margin-bottom: 20px;
-    &.remember_me, &.forgot_password {
-      margin-bottom: 0px;
-      margin-top: 0px;
-    }
-    &.forgot_password {
-      text-align: right;
-    }
-    &.remember_me label {
-      margin-top: 20px;
-    }
-  }
   #flash_container, .errorExplanation {
     margin-bottom: 12px;
   }
-  /* Works in Firefox, Safari, Chrome, IE8+ */
-  input.larger {
-    background: image_url('refinery/text_field_background.png') repeat-x white;
-    height: 31px;
-  }
-  input.larger:focus {
-    background-position: 0px -41px;
-  }
   .fieldWithErrors input.larger {
-    background-position: 0px -82px;
-    border: 1px solid red;
+    border-colour: red;
   }
 }
 div.field.checkbox_access {
@@ -527,12 +447,6 @@ textarea {
   border: inherit;
   width: auto;
   height: 25px;
-}
-label, .label_with_help {
-  margin-bottom: 5px;
-  font-weight: bold;
-  margin-top: 20px;
-  display: block;
 }
 label.input_label {
   font-size: inherit;
