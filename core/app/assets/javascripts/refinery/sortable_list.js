@@ -13,8 +13,8 @@ var create_sortable_list = function(options){
                     return ($(this).children("#actions").length > 0);
                 });
                 this.actions = $("#actions",this.div_with_list_and_actions);
-                this.reorder_action = $('#reorder_action',this.actions);
-                this.reorder_action_done = $('#reorder_action_done',this.actions);
+                this.reorder_action = $('#reorder_action');
+                this.reorder_action_done = $('#reorder_action_done');
 
 
                 this.sortable_list.addClass("sortable_list");
