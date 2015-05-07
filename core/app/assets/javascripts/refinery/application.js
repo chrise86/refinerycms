@@ -1,5 +1,6 @@
 /*
  *= require refinery/site_bar
+ *= require semantic-ui
  *= require refinery/admin
  *= require refinery/submenu
  *= require refinery/interface

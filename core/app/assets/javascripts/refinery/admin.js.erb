@@ -11,7 +11,14 @@ init_refinery_admin = function(){
   init_ajaxy_pagination();
 };
 
-$(document).ready(init_refinery_admin);
+$('.dropdown').dropdown({
+  transition: 'drop'
+});
+
+$(document).ready(function() {
+  init_refinery_admin
+  $('.ui.accordion').accordion();
+});
 
 if(typeof(window.onpopstate) == "object"){
   $(window).bind('popstate', function(e) {

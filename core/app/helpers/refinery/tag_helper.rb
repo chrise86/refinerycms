@@ -16,5 +16,10 @@ module Refinery
       image_tag "refinery/icons/#{filename}", {:width => 16, :height => 16}.merge(options)
     end
 
+    def semantic_icon(icon, options={})
+      content_tag(:i, nil, class: "#{icon} icon") +
+      options.delete(:text)
+    end
+
   end
 end

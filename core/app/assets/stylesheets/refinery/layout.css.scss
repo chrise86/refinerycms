@@ -156,15 +156,7 @@ noscript .flash.flash_alert a, noscript .flash.flash_alert a:hover {
 
 #content {
   padding: 0px;
-  a {
-    border-bottom: 1px dotted #727272;
-    &.button {
-      border-bottom: 0;
-    }
-    &.locale {
-      border-bottom: 0;
-    }
-  }
+
   h1 {
     font-size: 18px;
     font-weight: lighter;
@@ -404,29 +396,6 @@ pre {
 }
 #records h2, #actions h2 {
   margin-top: 0px;
-}
-.pagination {
-  background-color: #C9DAE2;
-  padding: 5px 5px 4px 5px;
-  margin: 10px 0px;
-  em {
-    font-weight: bold;
-    font-style: normal;
-    padding: 0px 6px;
-  }
-}
-.pagination {
-  .disabled {
-    color: #A8B9C1;
-  }
-  a, #content a, .current, .disabled, em  {
-    padding: 7px;
-    line-height: 20px;
-    border-bottom: 0px none;
-  }
-  .current, a:hover, em {
-    background: #A8B9C1;
-  }
 }
 #dialog-form-actions .pagination {
   margin: -4px 6px -4px 0px;
