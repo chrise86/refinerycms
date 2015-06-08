@@ -11,14 +11,14 @@ init_refinery_admin = function(){
   init_ajaxy_pagination();
 };
 
-$('.dropdown').dropdown({
-  transition: 'drop'
-});
-
 $(document).ready(init_refinery_admin);
 
 $(document).ready(function() {
   $('.ui.accordion').accordion();
+  $('.datepicker').pickadate();
+  $('.dropdown').dropdown({
+    transition: 'drop'
+  });
 });
 
 if(typeof(window.onpopstate) == "object"){

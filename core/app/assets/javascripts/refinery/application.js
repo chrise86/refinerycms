@@ -7,4 +7,6 @@
  *= require refinery/sortable_menu
  *= require refinery/submit_continue
  *= require refinery/ajaxy_pagination
+ *= require refinery/picker
+ *= require refinery/picker.date
 */
