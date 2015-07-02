@@ -1,21 +1,19 @@
 <% if refinery_user? && "#{controller_name}##{action_name}" !~ %r{preview#show} %>
   <% unless admin? # all required JS included by backend. %>
-    <% content_for :stylesheets, stylesheet_link_tag('/refinery/site_bar') unless !!local_assigns[:exclude_css] %>
+    <% content_for :stylesheets, stylesheet_link_tag('refinery/site_bar') unless !!local_assigns[:exclude_css] %>
     <%= yield(:stylesheets) unless local_assigns[:head] || local_assigns[:exclude_css] %>
   <% end -%>
-  <div id='site_bar' class="ui fixed main menu">
-    <div class="site-bar-container">
-      <div class="item">
-        <%= site_bar_switch_link -%>
-        <%= site_bar_edit_link -%>
-      </div>
+  <div id='site_bar' class="ui fixed main menu <%= controller_path =~ /admin/ ? 'admin' : 'front-end' %>">
+    <div class="item">
+      <%= site_bar_switch_link -%>
+    </div>
+    <%= site_bar_edit_link -%>
 
-      <%= link_to Refinery::Core.site_name, refinery.admin_root_path, class: 'item' %>
+    <%= link_to Refinery::Core.site_name, refinery.admin_root_path, class: 'item' %>
 
-      <div class="right menu">
-        <%= link_to t('.log_out', site_bar_translate_locale_args),
-                    refinery.logout_path, :id => 'logout', class: 'item' %>
-      </div>
+    <div class="right menu">
+      <%= link_to t('.log_out', site_bar_translate_locale_args),
+                  refinery.logout_path, :id => 'logout', class: 'item' %>
     </div>
   </div>
 <% end %>

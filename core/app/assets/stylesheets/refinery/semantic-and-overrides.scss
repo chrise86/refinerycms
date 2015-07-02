@@ -4,8 +4,16 @@ body {
   padding-top: 20px;
 }
 
+.with-sub-items {
+  padding-bottom: 0!important;
+}
+
 .sub-actions {
-  margin: .5em -.95em 0!important;
+  margin: -0.78571em -.95em 0!important;
+
+  .content & {
+    margin: .5em -.95em 0!important;
+  }
 }
 
 .site-bar-container {
