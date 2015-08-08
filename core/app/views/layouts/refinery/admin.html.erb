@@ -4,19 +4,21 @@
   <%= render 'refinery/admin/head' %>
   <body class="<%= action_name %> <%= I18n.locale %>">
     <%= render '/refinery/site_bar' %>
-    <div id="admin_container" class="ui page grid">
+    <div id="admin_container" class="ui container">
       <div id='tooltip_container'></div>
-      <div class="three wide column">
-        <%= render 'refinery/admin/menu' %>
-      </div>
-      <div id="page_container" class="thirteen wide column">
-        <div id="page">
-          <div id="content" class="clearfix">
-            <div id="flash_container">
-              <%= render '/refinery/no_script' %>
-              <%= render '/refinery/message' %>
+      <div class="ui grid">
+        <div class="three wide column">
+          <%= render 'refinery/admin/menu' %>
+        </div>
+        <div id="page_container" class="thirteen wide column">
+          <div id="page">
+            <div id="content" class="clearfix">
+              <div id="flash_container">
+                <%= render '/refinery/no_script' %>
+                <%= render '/refinery/message' %>
+              </div>
+              <%= yield %>
             </div>
-            <%= yield %>
           </div>
         </div>
       </div>

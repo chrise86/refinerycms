@@ -6,7 +6,8 @@ gem 'quiet_assets'
 gem 'spring'
 gem 'spring-commands-rspec'
 gem 'poltergeist', github: 'teampoltergeist/poltergeist'
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+# gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+# gem 'semantic-ui-sass', '1.12.3.0'
 
 # Add support for refinerycms-acts-as-indexed
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
