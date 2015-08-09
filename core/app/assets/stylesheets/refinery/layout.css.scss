@@ -554,8 +554,8 @@ label.stripped {
   background-image: image_url('refinery/icons/ajax-loader.gif') !important;
 }
 #image_grid .actions a img {
-  padding: 4px 4px 1px 4px;
-  vertical-align: top;
+  // padding: 4px 4px 1px 4px;
+  vertical-align: middle;
 }
 .actions a:hover {
   color: #E6E5DC;
