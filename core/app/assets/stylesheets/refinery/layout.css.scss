@@ -834,6 +834,19 @@ a img {
 .go_icon              { background-image: image_url('refinery/icons/application_go.png'); }
 .success_icon         { background-image: image_url('refinery/icons/tick.png'); padding: 0px 8px; }
 .failure_icon         { background-image: image_url('refinery/icons/cross.png'); padding: 0px 8px; }
+
+.add_icon, .delete_icon,
+.edit_icon, .reorder_icon,
+.reorder_icon.loading,
+.user_comment_icon,
+.edit_email_icon,
+.spam_icon, .spam_empty_icon,
+.email_icon, .back_icon,
+.go_icon, .success_icon,
+.failure_icon {
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
 /* page parts */
 ul#page_parts {
   float: left;
